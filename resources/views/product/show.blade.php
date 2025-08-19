@@ -9,9 +9,15 @@
     </div>
     <div class="col-md-8">
       <div class="card-body">
-        <h5 class="card-title @if($viewData['product']['price'] > 100) text-danger @endif">{{ $viewData["product"]["name"] }}</h5>
-        <p class="card-text">{{ $viewData["product"]["description"] }}</p>
-        <p class="card-text"><strong>Price: ${{ $viewData["product"]["price"] }}</strong></p>
+        <h5 class="card-title">
+           {{ $viewData["product"]->name }}
+        </h5>
+        <p class="card-text">{{ $viewData["product"]->price }}</p>
+
+        @foreach($viewData["product"]->comments as $comment)
+          - {{ $comment->getDescription() }}<br />
+        @endforeach
+
       </div>
     </div>
   </div>
