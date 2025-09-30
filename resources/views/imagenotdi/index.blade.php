@@ -1,11 +1,11 @@
 @extends('layouts.app')
-@section("title", "Image Storage - NO DI")
+@section("title", "Image Storage - DI")
 @section('content')
 <div class="container">
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card">
-        <div class="card-header">Upload image (NO DI)</div>
+        <div class="card-header">Upload image</div>
         <div class="card-body">
 
         <form action="{{ route('imagenotdi.save') }}" method="post" enctype="multipart/form-data">
@@ -24,3 +24,4 @@
   </div>
 </div>
 @endsection
+
